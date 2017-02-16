@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Misc.Files.PDF_Generator;
 using Misc.Text;
 
 namespace Misc
@@ -13,7 +12,7 @@ namespace Misc
 
         private static void Main()
         {
-           // Run();
+            Run();
            
 
             Console.Read();
