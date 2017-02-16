@@ -8,7 +8,13 @@ namespace Misc.Text
 {
     internal class Palindrome
     {
-        public static bool IsTrue(string s)
+        public static void CheckIfPalindrome()
+        {
+            Console.WriteLine("Enter a word to see if it's palindromic. (Mum, Dad, racecar, etc.)");
+            Console.WriteLine(IsTrue(Console.ReadLine()));
+        }
+
+        private static string IsTrue(string s)
         {
             char[] letters = s.ToCharArray();
             char[] lettersReversed = letters.Reverse().ToArray();
@@ -20,7 +26,7 @@ namespace Misc.Text
                     letterPalin++;
             }
 
-            return letterPalin == letters.Length;
+            return s + (letterPalin == letters.Length ? " is" : " is not") + " palindromic";
         }
 
     }

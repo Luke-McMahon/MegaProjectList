@@ -10,7 +10,15 @@ namespace Misc.Text
     {
         public static string ToReverse = "This should be reversed";
 
-        public static string Init(string s)
+
+
+        public static void Init()
+        {
+            Console.WriteLine("Enter a word/sentence to be reversed.");
+            Console.WriteLine(Reverse(Console.ReadLine()));
+        }
+
+        private static string Reverse(string s)
         {
             char[] reversed = s.ToCharArray().Reverse().ToArray();
             string result = "";

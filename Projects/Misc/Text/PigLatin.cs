@@ -9,7 +9,13 @@ namespace Misc.Text
     internal class PigLatin
     {
 
-        public static string Init(string sentence)
+        public static void Init()
+        {
+            Console.WriteLine("Enter a word/sentence to translate into Pig Latin.");
+            Console.WriteLine(Pigify(Console.ReadLine()));
+        }
+
+        private static string Pigify(string sentence)
         {
             const string Vowels = "AEIOUaeiou";
             List<string> pigWords = new List<string>();

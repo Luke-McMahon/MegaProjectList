@@ -8,12 +8,19 @@ namespace Misc.Text
 {
     internal class VowelCount
     {
-        private static char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+        private static readonly char[] vowels = {'a', 'e', 'i', 'o', 'u'};
         private static string word = "hiya";
 
-        public static int Init(string s)
+        public static void Init()
+        {
+            Console.WriteLine("Enter a word/sentence to find the sum of the vowels.");
+            Console.WriteLine(VowelsCounted(Console.ReadLine()));
+        }
+
+        private static string VowelsCounted(string s)
         {
             int counted = 0;
+            word = s;
 
             foreach (char c in s)
             {
@@ -23,8 +30,8 @@ namespace Misc.Text
                     counted++;
                 }
             }
-
-            return counted;
+            
+            return "There "+ (counted == 1 ? "is " : "are ")+ + counted + (word.Length > 1 ? " vowels." : " vowel.");
         }
     }
 }
