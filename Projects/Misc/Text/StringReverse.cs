@@ -20,14 +20,18 @@ namespace Misc.Text
 
         private static string Reverse(string s)
         {
+			// create an array from the user input and reverse it
             char[] reversed = s.ToCharArray().Reverse().ToArray();
             string result = "";
 
+			// loop through each character in the reversed array
             foreach (char c in reversed)
             {
+				// add the character to our resulting string
                 result += c;
             }
 
+			// output the reversed result
             return result;
         }
     }

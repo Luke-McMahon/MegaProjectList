@@ -12,9 +12,10 @@ namespace Misc
 
         private static void Main()
         {
-            Run();
-           
+			// Deals with all the different fucntions
+            Run();           
 
+			// keep the console alive until the user hits a key after the above ^
             Console.Read();
         }
 

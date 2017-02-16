@@ -19,12 +19,17 @@ namespace Misc.Text
 
         private static string CreateKey()
         {
+			// create a new guid instance
             Guid serialGuid = Guid.NewGuid();
+			// force the serial to be numeric
             string uniqueSerial = serialGuid.ToString("N");
 
+			// specify a particular length
             string uniqueSerialLength = uniqueSerial.Substring(0, 28);
 
+			// create an array to hold the characters of the serial
             char[] serialArray = uniqueSerialLength.ToCharArray();
+			// this is the actual key
             string finalNumber = "";
 
             int j = 0;
@@ -32,9 +37,11 @@ namespace Misc.Text
             {
                 for (j = i; j < 4 + i; j++)
                 {
+					// set the key
                     finalNumber += serialArray[j];
                 }
 
+				// if we're at the 28th index, we're finished!
                 if (j == 28)
                     break;
 
